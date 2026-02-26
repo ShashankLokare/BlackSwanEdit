@@ -1,0 +1,18 @@
+{
+  "name": "Mermaid",
+  "fileExtensions": ["mmd", "mermaid"],
+  "shebangs": [],
+  "tokenRules": [
+    { "id": "comment", "pattern": "%%.*$", "flags": [] },
+    { "id": "keyword", "pattern": "\\b(graph|flowchart|sequenceDiagram|classDiagram|stateDiagram|stateDiagram-v2|erDiagram|journey|gantt|pie|mindmap|timeline)\\b", "flags": [] },
+    { "id": "keyword", "pattern": "\\b(subgraph|end|direction|linkStyle|style|classDef|class|click|call|activate|deactivate|note|loop|alt|opt|par|and|rect|critical|break)\\b", "flags": [] },
+    { "id": "string", "pattern": "\"([^\"\\\\]|\\\\.)*\"", "flags": [] },
+    { "id": "string", "pattern": "'([^'\\\\]|\\\\.)*'", "flags": [] },
+    { "id": "number", "pattern": "\\b(\\d+\\.\\d+|\\d+)\\b", "flags": [] },
+    { "id": "attribute", "pattern": "\\b[A-Za-z_][A-Za-z0-9_]*\\s*:", "flags": [] },
+    { "id": "tag", "pattern": "(-->|---|==>|-\\.->|\\.->|<-->|<-->\\|\\w+\\|)", "flags": [] }
+  ],
+  "foldIndent": true,
+  "embeddedRegions": []
+}
+

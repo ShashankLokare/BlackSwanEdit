@@ -1,0 +1,39 @@
+{
+  "name": "Ruby",
+  "fileExtensions": ["rb", "rake", "gemspec"],
+  "shebangs": ["ruby"],
+  "tokenRules": [
+    {
+      "id": "comment",
+      "pattern": "#.*$",
+      "flags": []
+    },
+    {
+      "id": "string",
+      "pattern": "\"([^\"\\\\]|\\\\.)*\"|'([^'\\\\]|\\\\.)*'",
+      "flags": []
+    },
+    {
+      "id": "keyword",
+      "pattern": "\\b(alias|and|begin|break|case|class|def|defined\\?|do|else|elsif|end|ensure|for|if|in|module|next|not|or|redo|rescue|retry|return|self|super|then|undef|unless|until|when|while|yield)\\b",
+      "flags": []
+    },
+    {
+      "id": "number",
+      "pattern": "\\b(0x[0-9a-fA-F]+|\\d+\\.\\d+|\\d+)\\b",
+      "flags": []
+    },
+    {
+      "id": "function",
+      "pattern": "(?<=\\bdef\\s)[A-Za-z_][A-Za-z0-9_!?=]*",
+      "flags": []
+    },
+    {
+      "id": "class",
+      "pattern": "(?<=\\bclass\\s)[A-Za-z_][A-Za-z0-9_:]*",
+      "flags": []
+    }
+  ],
+  "foldIndent": true,
+  "embeddedRegions": []
+}

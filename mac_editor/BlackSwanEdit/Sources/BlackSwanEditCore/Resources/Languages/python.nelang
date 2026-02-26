@@ -1,0 +1,51 @@
+{
+  "name": "Python",
+  "fileExtensions": ["py", "pyw"],
+  "shebangs": ["python", "python3"],
+  "tokenRules": [
+    {
+      "id": "keyword",
+      "pattern": "\\b(and|as|assert|async|await|break|class|continue|def|del|elif|else|except|finally|for|from|global|if|import|in|is|lambda|nonlocal|not|or|pass|raise|return|try|while|with|yield)\\b",
+      "flags": []
+    },
+    {
+      "id": "keyword.value",
+      "pattern": "\\b(True|False|None)\\b",
+      "flags": []
+    },
+    {
+      "id": "string",
+      "pattern": "(\"\"\"[^\"]*\"\"\")|('''[^']*''')|(\"([^\"\\\\]|\\\\.)*\")|('([^'\\\\]|\\\\.)*')",
+      "flags": ["dotall"]
+    },
+    {
+      "id": "comment",
+      "pattern": "#.*",
+      "flags": []
+    },
+    {
+      "id": "number",
+      "pattern": "\\b(\\d+\\.\\d+|\\d+)\\b",
+      "flags": []
+    },
+    {
+      "id": "type",
+      "pattern": "\\b(int|float|str|bool|list|dict|set|tuple|bytes)\\b",
+      "flags": []
+    },
+    {
+      "id": "function",
+      "pattern": "(?<=\\bdef\\s)[A-Za-z_][A-Za-z0-9_]*",
+      "flags": []
+    },
+    {
+      "id": "class",
+      "pattern": "(?<=\\bclass\\s)[A-Za-z_][A-Za-z0-9_]*",
+      "flags": []
+    }
+  ],
+  "foldStart": ":\\s*$",
+  "foldEnd": "^\\S",
+  "foldIndent": true,
+  "embeddedRegions": []
+}

@@ -1,0 +1,22 @@
+{
+  "name": "JavaScript (JSX)",
+  "fileExtensions": ["jsx"],
+  "shebangs": [],
+  "tokenRules": [
+    { "id": "comment", "pattern": "//.*$", "flags": [] },
+    { "id": "comment.block", "pattern": "/\\*[\\s\\S]*?\\*/", "flags": ["dotall"] },
+    { "id": "string", "pattern": "`([^`\\\\]|\\\\.)*`", "flags": ["dotall"] },
+    { "id": "string", "pattern": "\"([^\"\\\\]|\\\\.)*\"", "flags": [] },
+    { "id": "string", "pattern": "'([^'\\\\]|\\\\.)*'", "flags": [] },
+    { "id": "number", "pattern": "\\b(0x[0-9a-fA-F]+|\\d+\\.\\d+|\\d+)\\b", "flags": [] },
+    { "id": "keyword", "pattern": "\\b(await|break|case|catch|class|const|continue|debugger|default|delete|do|else|export|extends|finally|for|function|if|import|in|instanceof|let|new|return|super|switch|this|throw|try|typeof|var|void|while|with|yield)\\b", "flags": [] },
+    { "id": "keyword.value", "pattern": "\\b(true|false|null|undefined|NaN|Infinity)\\b", "flags": [] },
+
+    { "id": "tag", "pattern": "</?[A-Za-z][A-Za-z0-9:_\\-\\.]*", "flags": [] },
+    { "id": "attribute", "pattern": "\\b[A-Za-z_:][A-Za-z0-9:_\\-\\.]*\\s*(?==)", "flags": [] },
+    { "id": "tag", "pattern": "/?>", "flags": [] }
+  ],
+  "foldIndent": true,
+  "embeddedRegions": []
+}
+

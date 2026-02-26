@@ -1,0 +1,29 @@
+{
+  "name": "JSON",
+  "fileExtensions": ["json", "jsonc"],
+  "shebangs": [],
+  "tokenRules": [
+    {
+      "id": "string",
+      "pattern": "\"([^\"\\\\]|\\\\.)*\"",
+      "flags": []
+    },
+    {
+      "id": "number",
+      "pattern": "\\b(-?\\d+\\.\\d+|-?\\d+)\\b",
+      "flags": []
+    },
+    {
+      "id": "keyword.value",
+      "pattern": "\\b(true|false|null)\\b",
+      "flags": []
+    },
+    {
+      "id": "property",
+      "pattern": "\"([^\"\\\\]|\\\\.)*\"\\s*:",
+      "flags": []
+    }
+  ],
+  "foldIndent": true,
+  "embeddedRegions": []
+}

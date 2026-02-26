@@ -1,0 +1,17 @@
+{
+  "name": "TOML",
+  "fileExtensions": ["toml"],
+  "shebangs": [],
+  "tokenRules": [
+    { "id": "comment", "pattern": "#.*$", "flags": [] },
+    { "id": "string", "pattern": "\"([^\"\\\\]|\\\\.)*\"", "flags": [] },
+    { "id": "string", "pattern": "'[^']*'", "flags": [] },
+    { "id": "number", "pattern": "\\b(-?\\d+\\.\\d+|-?\\d+)\\b", "flags": [] },
+    { "id": "keyword.value", "pattern": "\\b(true|false)\\b", "flags": [] },
+    { "id": "tag", "pattern": "^\\s*\\[[^\\]]+\\]\\s*$", "flags": [] },
+    { "id": "attribute", "pattern": "^[A-Za-z0-9_\\-\\.]+(?=\\s*=)", "flags": [] }
+  ],
+  "foldIndent": true,
+  "embeddedRegions": []
+}
+

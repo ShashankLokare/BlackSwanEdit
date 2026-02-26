@@ -1,0 +1,49 @@
+{
+  "name": "JavaScript",
+  "fileExtensions": ["js", "mjs", "cjs", "jsx"],
+  "shebangs": ["node", "deno"],
+  "tokenRules": [
+    {
+      "id": "comment",
+      "pattern": "//.*$",
+      "flags": []
+    },
+    {
+      "id": "comment.block",
+      "pattern": "/\\*.*?\\*/",
+      "flags": ["dotall"]
+    },
+    {
+      "id": "string",
+      "pattern": "(\"([^\"\\\\]|\\\\.)*\")|('([^'\\\\]|\\\\.)*')|(`([^`\\\\]|\\\\.)*`)",
+      "flags": []
+    },
+    {
+      "id": "keyword",
+      "pattern": "\\b(await|break|case|catch|class|const|continue|debugger|default|delete|do|else|export|extends|finally|for|function|if|import|in|instanceof|let|new|return|super|switch|this|throw|try|typeof|var|void|while|with|yield)\\b",
+      "flags": []
+    },
+    {
+      "id": "keyword.value",
+      "pattern": "\\b(true|false|null|undefined)\\b",
+      "flags": []
+    },
+    {
+      "id": "number",
+      "pattern": "\\b(0x[0-9a-fA-F]+|\\d+\\.\\d+|\\d+)\\b",
+      "flags": []
+    },
+    {
+      "id": "function",
+      "pattern": "\\b([A-Za-z_$][A-Za-z0-9_$]*)\\s*(?=\\()",
+      "flags": []
+    },
+    {
+      "id": "variable",
+      "pattern": "\\b([A-Za-z_$][A-Za-z0-9_$]*)\\b",
+      "flags": []
+    }
+  ],
+  "foldIndent": true,
+  "embeddedRegions": []
+}

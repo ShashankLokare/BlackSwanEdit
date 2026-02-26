@@ -1,0 +1,34 @@
+{
+  "name": "YAML",
+  "fileExtensions": ["yaml", "yml"],
+  "shebangs": [],
+  "tokenRules": [
+    {
+      "id": "comment",
+      "pattern": "#.*$",
+      "flags": []
+    },
+    {
+      "id": "property",
+      "pattern": "^\\s*[A-Za-z0-9_.\\-]+(?=\\s*:)",
+      "flags": []
+    },
+    {
+      "id": "string",
+      "pattern": "\"([^\"\\\\]|\\\\.)*\"|'([^'\\\\]|\\\\.)*'",
+      "flags": []
+    },
+    {
+      "id": "number",
+      "pattern": "\\b(-?\\d+\\.\\d+|-?\\d+)\\b",
+      "flags": []
+    },
+    {
+      "id": "keyword.value",
+      "pattern": "\\b(true|false|null|yes|no|on|off)\\b",
+      "flags": ["caseInsensitive"]
+    }
+  ],
+  "foldIndent": true,
+  "embeddedRegions": []
+}

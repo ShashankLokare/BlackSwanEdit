@@ -1,0 +1,18 @@
+{
+  "name": "Markdown",
+  "fileExtensions": ["md", "markdown"],
+  "shebangs": [],
+  "tokenRules": [
+    { "id": "keyword", "pattern": "^#{1,6} .*", "flags": [] },
+    { "id": "comment", "pattern": "^>.*", "flags": [] },
+    { "id": "keyword", "pattern": "^(\\s*[-*+]\\s+|\\s*\\d+\\.\\s+).*$", "flags": [] },
+    { "id": "string", "pattern": "`[^`]+`", "flags": [] },
+    { "id": "comment.block", "pattern": "^```.*$", "flags": [] },
+    { "id": "keyword", "pattern": "\\*\\*[^*]+\\*\\*", "flags": [] },
+    { "id": "keyword", "pattern": "_[^_]+_", "flags": [] },
+    { "id": "string", "pattern": "\\[[^\\]]+\\]\\([^\\)]+\\)", "flags": [] }
+  ],
+  "foldIndent": true,
+  "embeddedRegions": []
+}
+

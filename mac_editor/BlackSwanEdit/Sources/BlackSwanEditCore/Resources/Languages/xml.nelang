@@ -1,0 +1,29 @@
+{
+  "name": "XML",
+  "fileExtensions": ["xml", "xhtml", "svg"],
+  "shebangs": [],
+  "tokenRules": [
+    {
+      "id": "comment",
+      "pattern": "<!--.*?-->",
+      "flags": ["dotall"]
+    },
+    {
+      "id": "tag",
+      "pattern": "</?[A-Za-z_:][A-Za-z0-9_.:-]*",
+      "flags": []
+    },
+    {
+      "id": "attribute",
+      "pattern": "\\b[A-Za-z_:][A-Za-z0-9_.:-]*(?=\\s*=)",
+      "flags": []
+    },
+    {
+      "id": "string",
+      "pattern": "\"([^\"\\\\]|\\\\.)*\"|'([^'\\\\]|\\\\.)*'",
+      "flags": []
+    }
+  ],
+  "foldIndent": true,
+  "embeddedRegions": []
+}

@@ -1,0 +1,44 @@
+{
+  "name": "TypeScript",
+  "fileExtensions": ["ts", "tsx"],
+  "shebangs": [],
+  "tokenRules": [
+    {
+      "id": "comment",
+      "pattern": "//.*$",
+      "flags": []
+    },
+    {
+      "id": "comment.block",
+      "pattern": "/\\*.*?\\*/",
+      "flags": ["dotall"]
+    },
+    {
+      "id": "string",
+      "pattern": "(\"([^\"\\\\]|\\\\.)*\")|('([^'\\\\]|\\\\.)*')|(`([^`\\\\]|\\\\.)*`)",
+      "flags": []
+    },
+    {
+      "id": "keyword",
+      "pattern": "\\b(abstract|any|as|asserts|async|await|break|case|catch|class|const|continue|debugger|declare|default|delete|do|else|enum|export|extends|finally|for|from|function|if|implements|import|in|infer|instanceof|interface|is|keyof|let|module|namespace|new|readonly|return|satisfies|super|switch|this|throw|try|type|typeof|var|void|while|with|yield)\\b",
+      "flags": []
+    },
+    {
+      "id": "type",
+      "pattern": "\\b(string|number|boolean|unknown|never|object|symbol|bigint|void)\\b",
+      "flags": []
+    },
+    {
+      "id": "number",
+      "pattern": "\\b(0x[0-9a-fA-F]+|\\d+\\.\\d+|\\d+)\\b",
+      "flags": []
+    },
+    {
+      "id": "function",
+      "pattern": "\\b([A-Za-z_$][A-Za-z0-9_$]*)\\s*(?=\\()",
+      "flags": []
+    }
+  ],
+  "foldIndent": true,
+  "embeddedRegions": []
+}

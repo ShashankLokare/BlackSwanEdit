@@ -1,0 +1,9 @@
+{
+  "name": "Plain Text",
+  "fileExtensions": ["txt", "text", "log"],
+  "shebangs": [],
+  "tokenRules": [],
+  "foldIndent": false,
+  "embeddedRegions": []
+}
+

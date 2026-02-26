@@ -1,0 +1,44 @@
+{
+  "name": "Swift",
+  "fileExtensions": ["swift"],
+  "shebangs": ["swift"],
+  "tokenRules": [
+    {
+      "id": "comment",
+      "pattern": "//.*$",
+      "flags": []
+    },
+    {
+      "id": "comment.block",
+      "pattern": "/\\*.*?\\*/",
+      "flags": ["dotall"]
+    },
+    {
+      "id": "string",
+      "pattern": "\"(\\\\(.|\n)|[^\"])*\"",
+      "flags": []
+    },
+    {
+      "id": "keyword",
+      "pattern": "\\b(let|var|if|else|guard|switch|case|default|for|while|do|try|catch|throw|return|break|continue|func|class|struct|enum|protocol|extension|import|public|private|internal|fileprivate|open|static|mutating|nonmutating|override|final|async|await|actor|some|any|associatedtype|typealias|in|where|init|deinit|subscript|self|super|true|false|nil)\\b",
+      "flags": []
+    },
+    {
+      "id": "number",
+      "pattern": "\\b([0-9]+(\\.[0-9]+)?)\\b",
+      "flags": []
+    },
+    {
+      "id": "type",
+      "pattern": "\\b([A-Z][a-zA-Z0-9_]*)\\b",
+      "flags": []
+    },
+    {
+      "id": "attribute",
+      "pattern": "@[a-zA-Z_]+\\b",
+      "flags": []
+    }
+  ],
+  "foldIndent": true,
+  "embeddedRegions": []
+}

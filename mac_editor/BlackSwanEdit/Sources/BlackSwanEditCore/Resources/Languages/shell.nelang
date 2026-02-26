@@ -1,0 +1,41 @@
+{
+  "name": "Shell Script",
+  "fileExtensions": ["sh", "bash", "zsh"],
+  "shebangs": ["bash", "sh", "zsh", "env bash"],
+  "tokenRules": [
+    {
+      "id": "keyword",
+      "pattern": "\\b(if|fi|then|elif|else|for|do|done|until|while|case|esac|in|function|select|time)\\b",
+      "flags": []
+    },
+    {
+      "id": "keyword.builtin",
+      "pattern": "\\b(echo|printf|cd|pwd|export|local|read|return|exit|source|alias|unalias|set|unset|trap|wait|eval|exec|shift|let)\\b",
+      "flags": []
+    },
+    {
+      "id": "string",
+      "pattern": "(\"([^\"]|\\\\\")*\")|('([^']|\\\\')*')",
+      "flags": []
+    },
+    {
+      "id": "comment",
+      "pattern": "(?<!\\$)(#.*)",
+      "flags": []
+    },
+    {
+      "id": "variable",
+      "pattern": "(\\$[A-Za-z_][A-Za-z0-9_]*)|(\\$\\{[^}]+\\})",
+      "flags": []
+    },
+    {
+      "id": "number",
+      "pattern": "\\b\\d+\\b",
+      "flags": []
+    }
+  ],
+  "foldStart": "\\b(then|do|case)\\b",
+  "foldEnd": "\\b(fi|done|esac)\\b",
+  "foldIndent": true,
+  "embeddedRegions": []
+}
